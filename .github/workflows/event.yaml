@@ -10,4 +10,4 @@ jobs:
       APP_MODE: ${{ vars.APP_MODE }}
     steps:
       - name: Display Env Variable
-        run: echo "This is APP_MODE node"
+        run: echo "This is $APP_MODE mode"
