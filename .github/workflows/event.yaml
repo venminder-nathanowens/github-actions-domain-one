@@ -1,12 +1,13 @@
 name: Push Events
 on:
-  issues:
-    types:
-      - opened
+  push:
+    branches:
+      - main
 jobs:
   show-info:
     runs-on: ubuntu-latest
+    env:
+      APP_MODE: ${{ vars.APP_MODE }}
     steps:
-      - name: Info
-        run: |
-          echo "This is a push event on the main or test branch"
+      - name: Display Env Variable
+        run: echo "This is APP_MODE node"
